@@ -3207,7 +3207,7 @@ input, select, textarea {
 			width: 100%;
 			height: 100%;
 			background-color: #212931;
-			background-image: url("../../images/Backperson.jpg");
+			background-image: url("../../images/pic01.jpg");
 			background-size: 50%;
 			background-position: center top;
 			background-repeat: repeat;
@@ -3618,6 +3618,8 @@ input, select, textarea {
 		z-index: 2;
 	}
 
+        
+
 		#nav ul.divided li {
 			border-top-color: #ffffff;
 		}
@@ -3647,6 +3649,22 @@ input, select, textarea {
 				border-bottom-color: transparent;
 				color: #18bfef !important;
 			}
+                /* Page content */
+                .content {
+                    padding: 16px;
+                }
+
+                /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+                .sticky {
+                    position: fixed;
+                    top: 0;
+                    width: 100%;
+                }
+
+                    /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+                    .sticky + .content {
+                        padding-top: 60px;
+                    }
 
 		#nav strong, #nav b {
 			color: #ffffff;
@@ -3735,6 +3753,8 @@ input, select, textarea {
 			flex-shrink: 0;
 			margin-bottom: 0;
 		}
+
+        
 
 		@media screen and (max-width: 980px) {
 
