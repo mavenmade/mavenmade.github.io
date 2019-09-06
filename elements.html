@@ -386,10 +386,17 @@
                             <script type="text/javascript"> 
                                 var submitted = false;
                             </script>
+                            <!--this if isnt working :/-->
                             <script type="text/javascript">
                                 $('#gform').on('submit', function (e) {
-                                    $('#gform *').fadeOut(2000);
-                                    $('gform').prepend('Thank you! We will get back to you as soon as possible.')
+                                    if ('#gform.text' == 'Name') {
+                                        $('#gform').fadeIn(1000).prepend('The form has not been filled in properly');
+                                    }
+                                    else {
+                                        $('#gform *').fadeOut(2000);
+                                        $('#gform').fadeIn(1000).prepend('Thank you. We will get back to you as soon as possible!');
+                                    }
+                                    
                                 });
                             </script>
                             <hr />
@@ -398,7 +405,7 @@
                             <h2>Image</h2>
 
                             <h3>Fit</h3>
-                            <span class="image fit"><img src="images/pic01.jpg" alt="" /></span>
+                            <span class="image fit"><img src="images/suit1.jpg" alt="" /></span>
                             <div class="box alt">
                                 <div class="row gtr-50 gtr-uniform">
                                     <div class="col-4"><span class="image fit"><img src="images/suit1.jpg" alt="" /></span></div>
